@@ -69,6 +69,7 @@ class ApiDeviceController extends Controller
     {
         $request->validate(['data' => 'required']);
         $data = new Data(['data' => $request->data]);
+        $data->save();
         return $data;
     }
 }
