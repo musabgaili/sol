@@ -62,7 +62,9 @@ class ApiDeviceController extends Controller
 
     function testData(Request $request)
     {
-        return $request;
+        // return $request;
+        logger($request->getContent());
+        return $request->getContent();
     }
 
     function testSaveData(Request $request)

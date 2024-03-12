@@ -3,6 +3,7 @@
 use App\Models\Data;
 use App\Models\Device;
 use App\Models\DeviceUpdate;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +41,8 @@ Route::get('/random-data', function () {
         $data = Data::paginate(25);
     return view('random', ['d'=> $data, ]);
 })->name('random.data');
+
+
+Route::get('/xo/xo', function () {
+    return Http::post('https://api.musab.link/api/random-data-save' , ['data'=> 's']);
+});
