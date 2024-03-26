@@ -69,7 +69,7 @@ class ApiDeviceController extends Controller
 
     function testSaveData(Request $request)
     {
-        $request->validate(['data' => 'required']);
+        // $request->validate(['data' => 'required']);
         $data = new Data(['data' => $request->data]);
         $data->save();
         return $data;

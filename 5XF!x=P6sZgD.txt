@@ -1,0 +1,3 @@
+ssh -N -L 8888:127.0.0.1:80 -i ll.pem bitnami@35.154.144.75
+
+5XF!x=P6sZgD
