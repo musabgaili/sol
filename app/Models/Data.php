@@ -9,6 +9,8 @@ class Data extends Model
 {
     use HasFactory;
 
+    // protected $table = ['data'];
+
     protected $guarded = ['id'];
 
 }
